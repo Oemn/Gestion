@@ -1,5 +1,5 @@
 #Colocar en un futuro los import
-
+from gestion_estudiantes import *
 
 
 def menu():
