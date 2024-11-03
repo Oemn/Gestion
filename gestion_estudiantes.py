@@ -2,6 +2,7 @@ import pandas as pd
 
 def registrar_estudiante(estudiantes):
     cant = int(input("Cuantos estudiantes desea crear: "))
+    
     for i in range(len(estudiantes)+1,cant+(len(estudiantes))+1):
         
         Nombre = input("Ingrese Primer Nombre del Estudiante: ")
