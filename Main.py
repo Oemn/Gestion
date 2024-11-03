@@ -10,7 +10,7 @@ while True:
         4° - Obtener Promedio de un estudiante
         5° - Cerrar Programa
         ''')
-    opcion = int(input("Ingrese alguna de las opciones disponibles :"))
+    opcion = int(input("Ingrese alguna de las opciones disponibles: "))
     if opcion == 1:
         estudiantes.append(registrar_estudiante())
         pass        

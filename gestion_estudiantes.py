@@ -7,7 +7,7 @@ def registrar_estudiante():
         Rut = int(input("Ingrese rut (sin puntos,ni guion)"))
         matricula = id(Rut)
         estudiantes["est" + str(i)] = (Nombre, Apellido, Rut, matricula)
-        print(estudiantes)
+    print(estudiantes)
 
 def listar_estudiantes(estudiantes):
     for i in range(len(estudiantes)):
