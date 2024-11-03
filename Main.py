@@ -12,7 +12,7 @@ while True:
         ''')
     opcion = int(input("Ingrese alguna de las opciones disponibles :"))
     if opcion == 1:
-        estudiantes.append(registro_estudiante())
+        estudiantes.append(registrar_estudiante())
         pass        
     elif opcion == 2:
         listar_estudiantes(estudiantes)
