@@ -1,6 +1,8 @@
 #Colocar en un futuro los import
 import json
 from gestion_estudiantes import *
+import pandas as pd
+
 estudiantes = dict()
 while True:
     print('''

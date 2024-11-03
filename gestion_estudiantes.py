@@ -1,3 +1,5 @@
+import pandas as pd
+
 def registrar_estudiante(estudiantes):
     cant = int(input("Cuantos estudiantes desea crear: "))
     for i in range(len(estudiantes)+1,cant+(len(estudiantes))+1):
@@ -11,7 +13,7 @@ def registrar_estudiante(estudiantes):
     print(estudiantes)
 
 def listar_estudiantes(estudiantes):
-    for i in range(len(estudiantes)):
-        print(estudiantes[i])
+    est_ordenados = pd.Dataframe(estudiantes)
+    return print(est_ordenados)
 def modificar_estudiantes():
     pass
