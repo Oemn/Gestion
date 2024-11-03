@@ -17,3 +17,6 @@ for i in range(0,cant):
     Apellido = input("Ingrese Primer Apellido del Estudiante: ")
     Rut = int(input("Ingrese rut (sin puntos,ni guion)"))
     matricula = id(Rut)
+    estudiantes["est" + str(i)] = (Nombre, Apellido, Rut, matricula)
+    
+print(estudiantes)
