@@ -1,7 +1,7 @@
 #Colocar en un futuro los import
 import json
 from gestion_estudiantes import *
-estudiantes=[]
+estudiantes = dict()
 while True:
     print('''
         1°- Registrar Estudiantes
@@ -12,8 +12,8 @@ while True:
         ''')
     opcion = int(input("Ingrese alguna de las opciones disponibles: "))
     if opcion == 1:
-        estudiantes.append(registrar_estudiante())
-        pass        
+        registrar_estudiante(estudiantes)
+        continue        
     elif opcion == 2:
         listar_estudiantes(estudiantes)
         pass        
