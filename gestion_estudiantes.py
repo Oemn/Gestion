@@ -33,7 +33,7 @@ def eliminar_estudiantes(estudiantes):
     borrar=int(input("Ingrese Rut estudiante"))
     for i in estudiantes:
         if borrar == i['Rut']:
-            #antes de borrar añadir el respaldo del dato que se borro
+            #antes de eliminar lo añadimos al respaldo db_sys
             estudiantes.remove(i)
             print("Estudiante eliminado correctamente")
     

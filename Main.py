@@ -43,6 +43,17 @@ while True:
     2-Modificar Estudiantes
     3-Eliminar Estudiantes
     4-Listar Estudiantes
+    5-Registrar Cursos
+    6-Modificar Cursos
+    7-Eliminar Cursos
+    8-Listar Cursos
+    9-Modificar Calificacion //de esto no estoy seguro si hacerlo asi
+    10-Asignar Calificacion //de esto no estoy seguro si hacerlo asi
+    11-Calcular Promedio // En el documento no pide ver si el alumno esta aprobado o no asi que no lo haré
+    12-Total alumnos y cursos
+    13-Listar alumnos y cursos correspondientes
+    14-Listar TODO
+    15-Cerrar programa
     """)
     menu=int(input("Seleccione "))
     if menu == 1:
@@ -53,5 +64,27 @@ while True:
         break
     if menu == 4:
         break
-    else:
+    if menu == 5:
         break
+    if menu == 6:
+        break
+    if menu == 7:
+        break
+    if menu == 8:
+        break
+    if menu == 9:
+        break
+    if menu == 10:
+        break
+    if menu == 11:
+        break
+    if menu == 12:
+        break
+    if menu == 13:
+        break
+    if menu == 14:
+        break
+    if menu == 15:
+        break
+    else:
+        print("Opcion ingresada invalida")
