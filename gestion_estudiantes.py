@@ -21,6 +21,7 @@ def eliminar_estudiantes(estudiantes):
                     "Informacion Eliminada" : estudiantes.pop(i),
                     "Procendencia" : "Estudiantes"
                     }
+                    eliminacion_guardar(db_eliminacion)
                     print("Estudiante eliminado correctamente")
                     return
                 else:
