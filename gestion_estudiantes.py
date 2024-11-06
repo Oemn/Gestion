@@ -27,4 +27,4 @@ def eliminar_estudiantes(estudiantes):
                         print("Estudiante no encontrado.")
 def listar_estudiantes(estudiantes):
     df = pd.DataFrame(data = estudiantes)
-    return print(df.rename)
+    return print(df)
