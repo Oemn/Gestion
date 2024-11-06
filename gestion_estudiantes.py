@@ -21,7 +21,7 @@
 #     pass
 def registrar_estudiante(estudiantes):
     nombre=input("Ingrese nombre estudiante")
-    rut=int("Ingrese rut estudiante")
+    rut=int(input("Ingrese rut estudiante"))
     matricula=id(rut)
     estudiante={"Nombre": nombre, "Rut": rut, "Matricula": matricula}
     return (estudiante)

@@ -39,52 +39,46 @@ estudiantes=[]
 cursos=[]
 while True:
     print("""
-    1-Registrar Estudiantes
-    2-Modificar Estudiantes
-    3-Eliminar Estudiantes
-    4-Listar Estudiantes
-    5-Registrar Cursos
-    6-Modificar Cursos
-    7-Eliminar Cursos
-    8-Listar Cursos
-    9-Modificar Calificacion //de esto no estoy seguro si hacerlo asi
-    10-Asignar Calificacion //de esto no estoy seguro si hacerlo asi
-    11-Calcular Promedio // En el documento no pide ver si el alumno esta aprobado o no asi que no lo haré
-    12-Total alumnos y cursos
-    13-Listar alumnos y cursos correspondientes
-    14-Listar TODO
-    15-Cerrar programa
-    """)
-    menu=int(input("Seleccione "))
-    if menu == 1:
+    1- Estudiantes
+    2- Cursos
+    3- Calificaciones
+    4- Total alumnos y cursos
+    5- Listar Alumnos y cursos correspondientes
+    6- Listar TODO
+    7- Cerrar programa
+""")
+    menu_1=int(input("Seleccione opcion: "))
+    if menu_1 == 1:
+        print("""
+              1- Registrar
+              2- Modificar
+              3- Eliminar
+              """)
+        opcion_estudiante=int(input("Seleccione una opcion: "))
         break
-    if menu == 2:
+    if menu_1 == 2:
+        print("""
+              1- Registrar
+              2- Modificar
+              3- Eliminar
+              """)
+        opcion_cursos=int(input("Seleccione una opcion: "))
         break
-    if menu == 3:
+    if menu_1 == 3:
+        print("""
+              1- Registrar
+              2- Modificar
+              3- Eliminar
+              """)
+        opcion_calificacion=int(input("Seleccione una opcion: "))
         break
-    if menu == 4:
+    if menu_1 == 4:
         break
-    if menu == 5:
+    if menu_1 == 5:
         break
-    if menu == 6:
+    if menu_1 == 6:
         break
-    if menu == 7:
-        break
-    if menu == 8:
-        break
-    if menu == 9:
-        break
-    if menu == 10:
-        break
-    if menu == 11:
-        break
-    if menu == 12:
-        break
-    if menu == 13:
-        break
-    if menu == 14:
-        break
-    if menu == 15:
+    if menu_1 == 7:
         break
     else:
-        print("Opcion ingresada invalida")
+        print("Ingrese una opcion correcta.")
