@@ -22,8 +22,8 @@
 def registrar_estudiante(estudiantes):
     nombre=input("Ingrese nombre estudiante")
     rut=int("Ingrese rut estudiante")
-    matricula=id(rut)
-    estudiante={"Nombre": nombre, "Rut": rut, "Matricula": matricula}
+    for i in range(len(estudiantes)+100): matricula = f"N°{i}"
+    estudiante={"Nombre": nombre, "Rut": rut, "Matricula": matricula} # No estas guardando los datos como tupla, aunque por ahora no lo cambiare
     return (estudiante)
 def modificar_estudiantes(estudiantes):
     matricula_ver=int(input("Ingrese matricula de estudiante a modificar"))
