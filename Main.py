@@ -39,57 +39,85 @@ from datos_universidad import *
 from eliminaciones import *
 estudiantes=[]
 cursos=[]
+sede=[]
 while True:
     print("""
-    1-Registrar Estudiantes
-    2-Modificar Estudiantes
-    3-Eliminar Estudiantes
-    4-Listar Estudiantes
-    5-Registrar Cursos
-    6-Modificar Cursos
-    7-Eliminar Cursos
-    8-Listar Cursos
-    9-Modificar Calificacion //de esto no estoy seguro si hacerlo asi
-    10-Asignar Calificacion //de esto no estoy seguro si hacerlo asi
-    11-Calcular Promedio // En el documento no pide ver si el alumno esta aprobado o no asi que no lo haré
-    12-Total alumnos y cursos
-    13-Listar alumnos y cursos correspondientes
-    14-Listar TODO
-    15-Cerrar programa
+    1-Estudiantes
+    2-Cursos
+    3-Notas
+    4-Universidad
+    5-Promediar nota
+    6-Listar alumnos y cursos
+    7-Listar TODO
+    8.Listar Estudiantes
+    9-Cerrar programa
     """)
     menu=int(input("Seleccione "))
     if menu == 1:
+        print("""
+        1-Registrar
+        2-Modificar
+        3-Eliminar
+        """)
+        opcion_estudiante=int(input("Seleccione opcion: "))
+        if opcion_estudiante == 1:
             estudiantes.append(registrar_estudiante(estudiantes))
-            print(estudiantes)
+        if opcion_estudiante == 2:
+            break
+        if opcion_estudiante == 3:
+            break
+    elif menu == 2:
+        print("""
+        1-Crear curso
+        2-Asignar curso
+        3-Listar cursos
+        """)
+        opcion_curso=int(input("Seleccione una opcion: "))
+        if opcion_estudiante == 1:
+            cursos.append(crear_curso(cursos))
+        if opcion_estudiante == 2:
+            break
+        if opcion_estudiante == 3:
+            listar_cursos(cursos)
     elif menu == 3:
-        eliminar_estudiantes(estudiantes)
-    if menu == 2:
+        print("""
+        1-Asignar nota
+        2-Modificar nota
+        3-Eliminar nota(todas)
+        """)
+        opcion_nota=int(input("Seleccione opcion: "))
+        if opcion_nota == 1:
+            break
+        if opcion_nota == 2:
+            break
+        if opcion_nota == 3:
+            break
         break
-    if menu == 3:
+    elif menu == 4:
+        print("""
+        1-Crear sede
+        2-Asignar sede
+        3-Listar sede
+        4-Eliminar sede
+        """)
+        opcion_universidad=int(input("Seleccione opcion: "))
+        if opcion_universidad == 1:
+            sede.append(crear_sede(sede))
+        if opcion_universidad == 2:
+            break
+        if opcion_universidad == 3:
+            listar_sede(sede)
+        if opcion_universidad == 4:
+            break
+    elif menu == 5:
+        #promediar las notas(un solo estudiante)
         break
-    if menu == 4:
+    elif menu == 6:
+        #
+        break
+    elif menu == 7:
+        break
+    elif menu == 8:
         listar_estudiantes(estudiantes)
-    if menu == 5:
+    elif menu == 9:
         break
-    if menu == 6:
-        break
-    if menu == 7:
-        break
-    if menu == 8:
-        break
-    if menu == 9:
-        break
-    if menu == 10:
-        break
-    if menu == 11:
-        break
-    if menu == 12:
-        break
-    if menu == 13:
-        break
-    if menu == 14:
-        break
-    if menu == 15:
-        break
-    else:
-        print("Ingrese una opcion correcta.")
