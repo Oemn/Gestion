@@ -62,10 +62,12 @@ while True:
         opcion_estudiante=int(input("Seleccione opcion: "))
         if opcion_estudiante == 1:
             estudiantes.append(registrar_estudiante(estudiantes))
+            continue
         if opcion_estudiante == 2:
             break
         if opcion_estudiante == 3:
-            break
+            eliminar_estudiantes(estudiantes)
+            continue
     elif menu == 2:
         print("""
         1-Crear curso
@@ -75,10 +77,12 @@ while True:
         opcion_curso=int(input("Seleccione una opcion: "))
         if opcion_estudiante == 1:
             cursos.append(crear_curso(cursos))
+            continue
         if opcion_estudiante == 2:
             break
         if opcion_estudiante == 3:
             listar_cursos(cursos)
+            continue
     elif menu == 3:
         print("""
         1-Asignar nota
@@ -119,5 +123,6 @@ while True:
         break
     elif menu == 8:
         listar_estudiantes(estudiantes)
+        continue
     elif menu == 9:
         break
