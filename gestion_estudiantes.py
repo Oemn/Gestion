@@ -8,23 +8,23 @@ import pandas as pd
 #         Nombre = input("Ingrese Primer Nombre del Estudiante: ")
 #         Apellido = input("Ingrese Primer Apellido del Estudiante: ")
 #         Rut = int(input("Ingrese rut (sin puntos,ni guion: )"))
-#         matricula = f"N°{id(Rut)}"
+#         for i in range(len(estudiantes)+100): matricula = f"N°{i}""
 #         estudiantes["est" + str(i)] = (Nombre, Apellido, Rut, matricula)
 #         asignaturas()
 
 #     print(estudiantes)
 
 def listar_estudiantes(estudiantes):
-    est_ordenados = pd.DataFrame(estudiantes)
-    return print(est_ordenados)
-# def modificar_estudiantes():
-#     pass
+    df = pd.DataFrame(data = estudiantes)
+    return print(df.rename(columns = {0 : "Nombre", 1 : "Rut" , 2 : "Matricula"},))
 def registrar_estudiante(estudiantes):
-    nombre=input("Ingrese nombre estudiante: ")
-    rut=int(input("Ingrese rut estudiante: "))
-    for i in range(len(estudiantes)+100): matricula = f"N°{i}"
-    estudiante=({"Nombre": nombre, "Rut": rut, "Matricula": matricula}) # No estas guardando los datos como tupla, aunque por ahora no lo cambiare
-    return (estudiante)
+
+        Nombre_c = input("Ingrese Primer Nombre y apellido del Estudiante: ")
+        Rut = int(input("Ingrese rut (sin puntos,ni guion: )"))
+        for e in range(len(estudiantes)+100): matricula = f"N°{e}"
+        return {
+            "Estudiante" : (Nombre_c, Rut, matricula)
+        }
 def modificar_nota_estudiantes(estudiantes):
     matricula_ver=int(input("Ingrese matricula de estudiante a modificar"))
     #se tendria que modificar la nota del estudiante
