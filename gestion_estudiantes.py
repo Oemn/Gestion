@@ -21,7 +21,7 @@ def registrar_estudiante(estudiantes):
 
         Nombre_c = input("Ingrese Primer Nombre y apellido del Estudiante: ")
         Rut = int(input("Ingrese rut (sin puntos,ni guion: )"))
-        for e in range(len(estudiantes)+100): matricula = f"N°{e}"
+        for e in range(len(estudiantes)+1001): matricula = f"N°{e}"
         return {
             "Estudiante" : (Nombre_c, Rut, matricula)
         }
@@ -30,14 +30,16 @@ def modificar_nota_estudiantes(estudiantes):
     #se tendria que modificar la nota del estudiante
     pass
 def eliminar_estudiantes(estudiantes):
-    borrar=int(input("Ingrese Rut estudiante"))
-    for i in estudiantes:
-        if borrar == i['Rut']:
-            #antes de eliminar lo añadimos al respaldo db_sys
-            estudiantes.remove(i)
-            print("Estudiante eliminado correctamente")
-    
-    print("Estudiante no encontrado.")
+    while True:
+        borrar=int(input("Ingrese matricula estudiante"))
+        for i in range(len(estudiantes)):
+            if estudiantes[i]['matricula'] == f"N°{borrar}":
+                #antes de eliminar lo añadimos al respaldo db_sys
+                estudiantes.remove(i)
+                print("Estudiante eliminado correctamente")
+        else:
+            print("Estudiante no encontrado.")
+            continue
 # def listar_estudiantes(estudiantes):
 #     # for i in estudiantes:
 #     #     print(f"Nombre: {i['Nombre']} Rut {i['Rut']} Matricula {i['Matricula']}")
