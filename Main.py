@@ -38,7 +38,7 @@ from gestion_universidad import *
 from datos_universidad import *
 from eliminaciones import *
 estudiantes=[]
-cursos=[]
+cursos=["Filosofia", "Teologia", "Antropologia", "Arqueologia"]
 sede=[]
 while True:
     print("""
@@ -74,12 +74,11 @@ while True:
         2-Asignar curso
         3-Listar cursos
         """)
-        opcion_curso=int(input("Seleccione una opcion: "))
         if opcion_estudiante == 1:
             cursos.append(crear_curso(cursos))
             continue
         if opcion_estudiante == 2:
-            break
+            asignar_cursos(estudiantes, cursos)
         if opcion_estudiante == 3:
             listar_cursos(cursos)
             continue
