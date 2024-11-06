@@ -36,6 +36,7 @@ from Calificaciones import *
 from add_new_course import *
 from gestion_universidad import *
 from datos_universidad import *
+from eliminaciones import *
 estudiantes=[]
 cursos=[]
 while True:
@@ -61,7 +62,7 @@ while True:
             estudiantes.append(registrar_estudiante(estudiantes))
             print(estudiantes)
     elif menu == 3:
-        break
+        eliminar_estudiantes(estudiantes)
     if menu == 2:
         break
     if menu == 3:

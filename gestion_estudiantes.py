@@ -1,5 +1,5 @@
 import pandas as pd
-from eliminaciones.py import *
+from eliminaciones import *
 # from gestion_cursos import *
 # def registrar_estudiante(estudiantes):
 #     cant = int(input("Cuantos estudiantes desea crear: "))
@@ -31,20 +31,21 @@ def modificar_nota_estudiantes(estudiantes):
     #se tendria que modificar la nota del estudiante
     pass
 def eliminar_estudiantes(estudiantes):
-    while True:
-        borrar=int(input("Ingrese matricula estudiante"))
-        for i in range(len(estudiantes)):
-            if estudiantes[i]['matricula'] == f"N°{borrar}":
-                #antes de eliminar lo añadimos al respaldo db_sys
-                db_eliminacion = {
-                   "Informacion Eliminada" : estudiantes.pop(i),
-                   "Procendencia" : "Estudiantes"
-                }
-                print("Estudiante eliminado correctamente")
-                
-        else:
-            print("Estudiante no encontrado.")
-            continue
+    pass
+    # while True:
+    #     borrar=(input("Ingrese matricula estudiante: "))
+    #     for key in estudiantes:
+    #         for tupla in key:
+    #             if borrar in tupla:
+    #                 db_eliminacion = {
+    #                 "Informacion Eliminada" : estudiantes.pop(tupla),
+    #                 "Procendencia" : "Estudiantes"
+    #                 }
+    #                 print("Estudiante eliminado correctamente")
+    #                 eliminacion_guardar(db_eliminacion)
+    #             else:
+    #                 print("Estudiante no encontrado.")
+    #                 continue
 # def listar_estudiantes(estudiantes):
 #     # for i in estudiantes:
 #     #     print(f"Nombre: {i['Nombre']} Rut {i['Rut']} Matricula {i['Matricula']}")
