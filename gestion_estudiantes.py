@@ -4,7 +4,7 @@ from eliminaciones import *
 
 def registrar_estudiante(estudiantes):
 
-        Nombre_c = input("Ingrese Primer Nombre y apellido del Estudiante: ")
+        Nombre_c = input("Ingrese Nombre: ")
         Rut = int(input("Ingrese rut (sin puntos,ni guion: )"))
         for e in range(len(estudiantes)+1001): matricula = f"N°{e}"
         return {
