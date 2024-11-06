@@ -62,35 +62,33 @@ while True:
             print(estudiantes)
     elif menu == 3:
         break
-    elif menu == 4:
+    if menu == 2:
+        break
+    if menu == 3:
+        break
+    if menu == 4:
         listar_estudiantes(estudiantes)
-    elif menu == 5:
+    if menu == 5:
         break
-    if menu_1 == 3:
-        print("""
-              1- Registrar
-              2- Modificar
-              3- Eliminar
-              """)
-        opcion_calificacion=int(input("Seleccione una opcion: "))
+    if menu == 6:
         break
-    elif menu == 7:
+    if menu == 7:
         break
-    elif menu == 8:
+    if menu == 8:
         break
-    elif menu == 9:
+    if menu == 9:
         break
-    elif menu == 10:
+    if menu == 10:
         break
-    elif menu == 11:
+    if menu == 11:
         break
-    elif menu == 12:
+    if menu == 12:
         break
-    elif menu == 13:
+    if menu == 13:
         break
-    elif menu == 14:
+    if menu == 14:
         break
-    elif menu == 15:
+    if menu == 15:
         break
     else:
         print("Ingrese una opcion correcta.")
