@@ -80,7 +80,6 @@ while True:
             continue
         if opcion_estudiante == 2:
             asignar_cursos(estudiantes, cursos)
-            continue
         if opcion_estudiante == 3:
             listar_cursos(cursos)
             continue
