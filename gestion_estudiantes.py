@@ -15,9 +15,7 @@ from eliminaciones import *
 
 #     print(estudiantes)
 
-def listar_estudiantes(estudiantes):
-    df = pd.DataFrame(data = estudiantes)
-    return print(df.rename(columns = {0 : "Nombre", 1 : "Rut" , 2 : "Matricula"},))
+
 def registrar_estudiante(estudiantes):
 
         Nombre_c = input("Ingrese Primer Nombre y apellido del Estudiante: ")
@@ -31,23 +29,19 @@ def modificar_nota_estudiantes(estudiantes):
     #se tendria que modificar la nota del estudiante
     pass
 def eliminar_estudiantes(estudiantes):
-    pass
-    # while True:
-    #     borrar=(input("Ingrese matricula estudiante: "))
-    #     for key in estudiantes:
-    #         for tupla in key:
-    #             if borrar in tupla:
-    #                 db_eliminacion = {
-    #                 "Informacion Eliminada" : estudiantes.pop(tupla),
-    #                 "Procendencia" : "Estudiantes"
-    #                 }
-    #                 print("Estudiante eliminado correctamente")
-    #                 eliminacion_guardar(db_eliminacion)
-    #             else:
-    #                 print("Estudiante no encontrado.")
-    #                 continue
-# def listar_estudiantes(estudiantes):
-#     # for i in estudiantes:
-#     #     print(f"Nombre: {i['Nombre']} Rut {i['Rut']} Matricula {i['Matricula']}")
-#     # pass
-    
+    while True:
+        borrar=int(input("Ingrese matricula estudiante: "))
+        for i in range(len(estudiantes)):
+            for estudiante in estudiantes:
+                if estudiante["Estudiante"][2] == f"N°{borrar}": 
+                    db_eliminacion = {
+                    "Informacion Eliminada" : estudiantes.pop(i),
+                    "Procendencia" : "Estudiantes"
+                    }
+                    print("Estudiante eliminado correctamente")
+                    return
+                else:
+                        print("Estudiante no encontrado.")
+def listar_estudiantes(estudiantes):
+    df = pd.DataFrame(data = estudiantes)
+    return print(df.rename)
