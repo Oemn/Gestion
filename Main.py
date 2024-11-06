@@ -28,6 +28,7 @@
 #         break
 #     elif opcion == 6:
 #         break
+import pandas as pd
 from gestion_estudiantes import *
 from datos_estudiantes import *
 from gestion_cursos import *
@@ -57,34 +58,33 @@ while True:
     """)
     menu=int(input("Seleccione "))
     if menu == 1:
+            estudiantes.append(registrar_estudiante(estudiantes))
+            print(estudiantes)
+    elif menu == 3:
         break
-    if menu == 2:
+    elif menu == 4:
+        listar_estudiantes(estudiantes)
+    elif menu == 5:
         break
-    if menu == 3:
+    elif menu == 6:
         break
-    if menu == 4:
+    elif menu == 7:
         break
-    if menu == 5:
+    elif menu == 8:
         break
-    if menu == 6:
+    elif menu == 9:
         break
-    if menu == 7:
+    elif menu == 10:
         break
-    if menu == 8:
+    elif menu == 11:
         break
-    if menu == 9:
+    elif menu == 12:
         break
-    if menu == 10:
+    elif menu == 13:
         break
-    if menu == 11:
+    elif menu == 14:
         break
-    if menu == 12:
-        break
-    if menu == 13:
-        break
-    if menu == 14:
-        break
-    if menu == 15:
+    elif menu == 15:
         break
     else:
         print("Opcion ingresada invalida")
