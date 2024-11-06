@@ -1,6 +1,6 @@
 def listar_cursos(cursos):
-    for i in range(len(cursos)): print(f"Cursos:{i[cursos]}")
-    pass
+    for i in range(len(cursos)): 
+        print(f"Cursos:{cursos[i]}")
 def modificar_cursos(cursos):
     pass
 def eliminar_cursos(cursos):

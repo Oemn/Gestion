@@ -74,8 +74,9 @@ while True:
         2-Asignar curso
         3-Listar cursos
         """)
-        if opcion_estudiante == 1:
-            cursos.append(crear_curso(cursos))
+        opcion_curso=int(input("Seleccione una opcion: "))
+        if opcion_curso == 1:
+            crear_curso(cursos)
             continue
         if opcion_estudiante == 2:
             asignar_cursos(estudiantes, cursos)
@@ -95,7 +96,6 @@ while True:
             break
         if opcion_nota == 3:
             break
-        break
     elif menu == 4:
         print("""
         1-Crear sede
@@ -105,9 +105,9 @@ while True:
         """)
         opcion_universidad=int(input("Seleccione opcion: "))
         if opcion_universidad == 1:
-            sede.append(crear_sede(sede))
+            crear_sede(sede)
         if opcion_universidad == 2:
-            break
+            asignar_sede(estudiantes)
         if opcion_universidad == 3:
             listar_sede(sede)
         if opcion_universidad == 4:
@@ -116,7 +116,6 @@ while True:
         #promediar las notas(un solo estudiante)
         break
     elif menu == 6:
-        #
         break
     elif menu == 7:
         break
