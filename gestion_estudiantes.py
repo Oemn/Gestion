@@ -1,4 +1,5 @@
 import pandas as pd
+from eliminaciones.py import *
 # from gestion_cursos import *
 # def registrar_estudiante(estudiantes):
 #     cant = int(input("Cuantos estudiantes desea crear: "))
@@ -35,8 +36,12 @@ def eliminar_estudiantes(estudiantes):
         for i in range(len(estudiantes)):
             if estudiantes[i]['matricula'] == f"N°{borrar}":
                 #antes de eliminar lo añadimos al respaldo db_sys
-                estudiantes.remove(i)
+                db_eliminacion = {
+                   "Informacion Eliminada" : estudiantes.pop(i),
+                   "Procendencia" : "Estudiantes"
+                }
                 print("Estudiante eliminado correctamente")
+                
         else:
             print("Estudiante no encontrado.")
             continue
