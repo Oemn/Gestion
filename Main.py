@@ -11,7 +11,7 @@ import os
 import json
 estudiantes=cargar_estudiantes()
 cursos=["Filosofia", "Teologia", "Antropologia", "Arqueologia"]
-sede=[]
+sede=("Concepcion","Lota")
 while True:
     print("""
     1-Estudiantes
@@ -28,32 +28,23 @@ while True:
     if menu == 1:
         print("""
         1-Registrar
-        2-Modificar
-        3-Eliminar
+        2-Eliminar
         """)
         opcion_estudiante=int(input("Seleccione opcion: "))
         if opcion_estudiante == 1:
             estudiantes.append(registrar_estudiante(estudiantes))
             obtener_estudiantes(estudiantes)
-            continue
-        
         if opcion_estudiante == 2:
-            break
-        if opcion_estudiante == 3:
             eliminar_estudiantes(estudiantes)
-            continue
     elif menu == 2:
         print("""
-        1-Crear curso
-        2-Asignar curso
-        3-Listar cursos
+        1-Asignar curso
+        2-Listar cursos
         """)
         opcion_curso=int(input("Seleccione una opcion: "))
         if opcion_curso == 1:
-            crear_curso(cursos)
-        if opcion_curso == 2:
             asignar_curso(estudiantes, cursos)
-        if opcion_curso == 3:
+        if opcion_curso == 2:
             listar_cursos(cursos)
     elif menu == 3:
         print("""
@@ -70,20 +61,14 @@ while True:
             break
     elif menu == 4:
         print("""
-        1-Crear sede
-        2-Asignar sede
-        3-Listar sede
-        4-Eliminar sede
+        1-Asignar sede
+        2-Listar sede
         """)
         opcion_universidad=int(input("Seleccione opcion: "))
         if opcion_universidad == 1:
-            crear_sede(sede)
+            asignar_sede(estudiantes,sede)
         if opcion_universidad == 2:
-            asignar_sede(estudiantes)
-        if opcion_universidad == 3:
             listar_sede(sede)
-        if opcion_universidad == 4:
-            break
     elif menu == 5:
         #promediar las notas(un solo estudiante)
         break
