@@ -7,8 +7,6 @@ from add_new_course import *
 from gestion_universidad import *
 from datos_universidad import *
 from eliminaciones import *
-import os
-import json
 estudiantes=cargar_estudiantes()
 cursos=["Filosofia", "Teologia", "Antropologia", "Arqueologia"]
 sede=("Concepcion","Lota")
@@ -48,7 +46,6 @@ while True:
             guardar_estudiantes(estudiantes)
         if opcion_curso == 2:
             listar_cursos(cursos)
-            guardar_estudiantes(estudiantes)
     elif menu == 3:
         print("""
         1-Asignar nota
@@ -69,12 +66,8 @@ while True:
         """)
         opcion_universidad=int(input("Seleccione opcion: "))
         if opcion_universidad == 1:
-<<<<<<< Updated upstream
             asignar_sede(estudiantes,sede)
             guardar_estudiantes(estudiantes)
-=======
-            asignar_sede(estudiantes)
->>>>>>> Stashed changes
         if opcion_universidad == 2:
             listar_sede(sede)
     elif menu == 5:

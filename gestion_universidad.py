@@ -40,9 +40,4 @@ def asignar_sede(estudiantes):
         except:
             print("Valor ingresado incorrecto.")
 def listar_sede(sede):
-<<<<<<< Updated upstream
-    for i in range(len(sede)):
-        print(f"Sede:{sede[i]}")
-=======
     print(f"Sede N°1: {sede[0]}\nSede N°2: {sede[1]}")
->>>>>>> Stashed changes
