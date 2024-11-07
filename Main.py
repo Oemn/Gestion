@@ -77,12 +77,10 @@ while True:
         opcion_curso=int(input("Seleccione una opcion: "))
         if opcion_curso == 1:
             crear_curso(cursos)
-            continue
-        if opcion_estudiante == 2:
-            asignar_cursos(estudiantes, cursos)
+        if opcion_curso == 2:
+            cursos_a(estudiantes, cursos)
         if opcion_estudiante == 3:
             listar_cursos(cursos)
-            continue
     elif menu == 3:
         print("""
         1-Asignar nota
