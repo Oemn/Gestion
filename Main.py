@@ -48,7 +48,6 @@ while True:
             guardar_estudiantes(estudiantes)
         if opcion_curso == 2:
             listar_cursos(cursos)
-            guardar_estudiantes(estudiantes)
     elif menu == 3:
         print("""
         1-Asignar nota
@@ -69,12 +68,8 @@ while True:
         """)
         opcion_universidad=int(input("Seleccione opcion: "))
         if opcion_universidad == 1:
-<<<<<<< Updated upstream
-            asignar_sede(estudiantes,sede)
-            guardar_estudiantes(estudiantes)
-=======
             asignar_sede(estudiantes)
->>>>>>> Stashed changes
+            guardar_estudiantes(estudiantes)
         if opcion_universidad == 2:
             listar_sede(sede)
     elif menu == 5:
