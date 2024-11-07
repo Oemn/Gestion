@@ -7,7 +7,9 @@ from add_new_course import *
 from gestion_universidad import *
 from datos_universidad import *
 from eliminaciones import *
-estudiantes=[]
+import os
+import json
+estudiantes=cargar_estudiantes()
 cursos=["Filosofia", "Teologia", "Antropologia", "Arqueologia"]
 sede=[]
 while True:
@@ -32,7 +34,9 @@ while True:
         opcion_estudiante=int(input("Seleccione opcion: "))
         if opcion_estudiante == 1:
             estudiantes.append(registrar_estudiante(estudiantes))
+            obtener_estudiantes(estudiantes)
             continue
+        
         if opcion_estudiante == 2:
             break
         if opcion_estudiante == 3:
@@ -91,4 +95,5 @@ while True:
         listar_estudiantes(estudiantes)
         continue
     elif menu == 9:
+        obtener_estudiantes(estudiantes)
         break
