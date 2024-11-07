@@ -1,0 +1,32 @@
+[
+    {
+        "Estudiante": [
+            "pepito",
+            1,
+            "N\u00b01000"
+        ],
+        "Curso": "",
+        "Notas": "",
+        "Sede": ""
+    },
+    {
+        "Estudiante": [
+            "pegame",
+            2,
+            "N\u00b01001"
+        ],
+        "Curso": "",
+        "Notas": "",
+        "Sede": ""
+    },
+    {
+        "Estudiante": [
+            "juanito",
+            3,
+            "N\u00b01002"
+        ],
+        "Curso": "",
+        "Notas": "",
+        "Sede": ""
+    }
+]
