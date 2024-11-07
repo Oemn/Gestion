@@ -33,7 +33,7 @@ while True:
         opcion_estudiante=int(input("Seleccione opcion: "))
         if opcion_estudiante == 1:
             estudiantes.append(registrar_estudiante(estudiantes))
-            obtener_estudiantes(estudiantes)
+            guardar_estudiantes(estudiantes)
         if opcion_estudiante == 2:
             eliminar_estudiantes(estudiantes)
     elif menu == 2:
@@ -80,5 +80,5 @@ while True:
         listar_estudiantes(estudiantes)
         continue
     elif menu == 9:
-        obtener_estudiantes(estudiantes)
+        guardar_estudiantes(estudiantes)
         break

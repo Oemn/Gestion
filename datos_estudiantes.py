@@ -1,6 +1,6 @@
 import json
 import os
-def obtener_estudiantes(estudiantes):
+def guardar_estudiantes(estudiantes):
     with open("registro_gestion.json", "w") as gestion:
         json.dump(estudiantes, gestion, indent=4)
         return
