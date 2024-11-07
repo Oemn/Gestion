@@ -15,7 +15,7 @@ def asignar_curso(estudiantes, cursos):
                 print("Estos son las Asignaturas disponibles actualmente")
                 asig = int(input("Ingrece el curso a asignar. Ej: Filosofia = 1 o arqueologia = 4"))
                 asig -= 1
-                estudiantes[e]["cursos"] = cursos[asig]
+                estudiantes[e]["Curso"].append(cursos[asig])
                 break
         else: 
             print("Ingrese una matricula apropiada")

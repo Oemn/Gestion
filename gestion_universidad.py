@@ -32,5 +32,3 @@ def asignar_sede(estudiantes,sede):
 def listar_sede(sede):
     for i in range(len(sede)):
         print(f"Sede:{sede[i]}")
-def eliminar_sede(sede):
-    pass

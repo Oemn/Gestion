@@ -8,7 +8,7 @@ def registrar_estudiante(estudiantes):
         Rut = int(input("Ingrese rut (sin puntos,ni guion: )"))
         for e in range(len(estudiantes)+1001): matricula = f"N°{e}"
         return {
-            "Estudiante" : (Nombre_c, Rut, matricula), "Curso":"","Notas":"","Sede":""
+            "Estudiante" : (Nombre_c, Rut, matricula), "Curso": [],"Notas":"","Sede":""
         }
     #se tendria que modificar la nota del estudiante
 def eliminar_estudiantes(estudiantes):

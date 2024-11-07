@@ -36,6 +36,7 @@ while True:
             guardar_estudiantes(estudiantes)
         if opcion_estudiante == 2:
             eliminar_estudiantes(estudiantes)
+            guardar_estudiantes(estudiantes)
     elif menu == 2:
         print("""
         1-Asignar curso
@@ -44,8 +45,10 @@ while True:
         opcion_curso=int(input("Seleccione una opcion: "))
         if opcion_curso == 1:
             asignar_curso(estudiantes, cursos)
+            guardar_estudiantes(estudiantes)
         if opcion_curso == 2:
             listar_cursos(cursos)
+            guardar_estudiantes(estudiantes)
     elif menu == 3:
         print("""
         1-Asignar nota
@@ -67,6 +70,7 @@ while True:
         opcion_universidad=int(input("Seleccione opcion: "))
         if opcion_universidad == 1:
             asignar_sede(estudiantes,sede)
+            guardar_estudiantes(estudiantes)
         if opcion_universidad == 2:
             listar_sede(sede)
     elif menu == 5:
