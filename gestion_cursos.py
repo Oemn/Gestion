@@ -6,10 +6,10 @@ def modificar_cursos(cursos):
 def eliminar_cursos(cursos):
     #antes de eliminar lo añadimos al respaldo db_sys
     pass
-def cursos_a(estudiantes, cursos):
+def asignar_curso(estudiantes, cursos):
     buscar = int(input("Ingrese la matricula del estudiante a asignar: "))
     for e in range(len(estudiantes)):
-        if f"N°{buscar}" == estudiantes[i]["Estudiante"][2]:
+        if f"N°{buscar}" == estudiantes[e]["Estudiante"][2]:
                 for i in range(len(cursos)): 
                     print(f"Cursos:{cursos[i]}")
                 print("Estos son las Asignaturas disponibles actualmente")

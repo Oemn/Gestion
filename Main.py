@@ -78,7 +78,7 @@ while True:
         if opcion_curso == 1:
             crear_curso(cursos)
         if opcion_curso == 2:
-            cursos_a(estudiantes, cursos)
+            asignar_curso(estudiantes, cursos)
         if opcion_curso == 3:
             listar_cursos(cursos)
     elif menu == 3:
