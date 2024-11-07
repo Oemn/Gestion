@@ -10,7 +10,7 @@ def registrar_estudiante(estudiantes):
         return {
             "Estudiante" : (Nombre_c, Rut, matricula), "Curso": [],"Notas":"","Sede":""
         }
-    #se tendria que modificar la nota del estudiante
+    #verificar si existe el rut 
 def eliminar_estudiantes(estudiantes):
     while True:
         borrar=int(input("Ingrese matricula estudiante: "))

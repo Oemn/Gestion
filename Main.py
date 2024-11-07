@@ -69,8 +69,12 @@ while True:
         """)
         opcion_universidad=int(input("Seleccione opcion: "))
         if opcion_universidad == 1:
+<<<<<<< Updated upstream
             asignar_sede(estudiantes,sede)
             guardar_estudiantes(estudiantes)
+=======
+            asignar_sede(estudiantes)
+>>>>>>> Stashed changes
         if opcion_universidad == 2:
             listar_sede(sede)
     elif menu == 5:
