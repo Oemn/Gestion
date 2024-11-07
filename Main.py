@@ -79,7 +79,7 @@ while True:
             crear_curso(cursos)
         if opcion_curso == 2:
             cursos_a(estudiantes, cursos)
-        if opcion_estudiante == 3:
+        if opcion_curso == 3:
             listar_cursos(cursos)
     elif menu == 3:
         print("""

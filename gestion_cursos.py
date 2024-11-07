@@ -8,13 +8,14 @@ def eliminar_cursos(cursos):
     pass
 def cursos_a(estudiantes, cursos):
     buscar = int(input("Ingrese la matricula del estudiante a asignar: "))
-    for i in range(len(estudiantes)):
+    for e in range(len(estudiantes)):
         if f"N°{buscar}" == estudiantes[i]["Estudiante"][2]:
-            for i in range(len(cursos)): print(f"Cursos:{i[cursos]}")
-            print("Estos son las Asignaturas disponibles actualmente")
-            asig = int(input("Ingrece el curso a asignar. Ej: Filosofia = 1 o arqueologia = 4"))
-            asig -= 1
-            estudiantes[i]["cursos"] = cursos[asig]
-            break
+                for i in range(len(cursos)): 
+                    print(f"Cursos:{cursos[i]}")
+                print("Estos son las Asignaturas disponibles actualmente")
+                asig = int(input("Ingrece el curso a asignar. Ej: Filosofia = 1 o arqueologia = 4"))
+                asig -= 1
+                estudiantes[e]["cursos"] = cursos[asig]
+                break
         else: 
             print("Ingrese una matricula apropiada")
