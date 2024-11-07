@@ -13,7 +13,7 @@ def asignar_curso(estudiantes, cursos):
                 for i in range(len(cursos)): 
                     print(f"Cursos:{cursos[i]}")
                 print("Estos son las Asignaturas disponibles actualmente")
-                asig = int(input("Ingrece el curso a asignar. Ej: Filosofia = 1 o arqueologia = 4"))
+                asig = int(input("Ingrece el curso a asignar. Ej: Filosofia = 1 o arqueologia = 4: "))
                 asig -= 1
                 estudiantes[e]["Curso"].append(asig)
                 break
