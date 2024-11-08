@@ -1,0 +1,28 @@
+[
+    {
+        "Informacion Eliminada": {
+            "Estudiante": [
+                "ewewew",
+                1111,
+                "N\u00b01000"
+            ],
+            "Curso": [],
+            "Notas": "",
+            "Sede": ""
+        },
+        "Procendencia": "Estudiantes"
+    },
+    {
+        "Informacion Eliminada": {
+            "Estudiante": [
+                "eee",
+                222,
+                "N\u00b01001"
+            ],
+            "Curso": [],
+            "Notas": "",
+            "Sede": ""
+        },
+        "Procendencia": "Estudiantes"
+    }
+]

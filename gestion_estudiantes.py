@@ -1,6 +1,6 @@
 import pandas as pd
 from eliminaciones import *
-
+db_eliminacion = []
 def registrar_estudiante(estudiantes):
     loop=True
     existe=False
