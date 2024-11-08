@@ -3,9 +3,7 @@ from gestion_estudiantes import *
 from datos_estudiantes import *
 from gestion_cursos import *
 from Calificaciones import *
-from add_new_course import *
 from gestion_universidad import *
-from datos_universidad import *
 from eliminaciones import *
 estudiantes=cargar_estudiantes()
 cursos=("Filosofia", "Teologia", "Antropologia", "Arqueologia")
