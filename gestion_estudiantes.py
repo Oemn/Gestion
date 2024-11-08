@@ -4,7 +4,12 @@ db_eliminacion = []
 def registrar_estudiante(estudiantes):
     loop=True
     existe=False
-    Nombre_c = input("Ingrese Nombre: ")
+    while True:
+        Nombre_c = input("Ingrese Nombre: ")
+        if bool(Nombre_c) == False:
+            continue
+        else:
+            break
     while loop:
         try:
             Rut = int(input("Ingrese rut (sin puntos,ni guion: )"))
