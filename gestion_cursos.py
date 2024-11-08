@@ -1,6 +1,5 @@
 def listar_cursos(cursos):
-    for i in range(len(cursos)): 
-        print(f"Cursos:{cursos[i]}")
+    print(f"Asignaturas: {cursos[0]} {cursos[1]} {cursos[2]} {cursos[3]}")
 def asignar_curso(estudiantes, cursos):
     if bool(estudiantes):
         buscar = int(input("Ingrese la matricula del estudiante a asignar: "))
