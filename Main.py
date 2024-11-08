@@ -8,7 +8,7 @@ from gestion_universidad import *
 from datos_universidad import *
 from eliminaciones import *
 estudiantes=cargar_estudiantes()
-cursos=["Filosofia", "Teologia", "Antropologia", "Arqueologia"]
+cursos=("Filosofia", "Teologia", "Antropologia", "Arqueologia")
 sede=("Concepcion","Lota")
 while True:
     try:
