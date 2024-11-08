@@ -24,22 +24,24 @@ def registrar_estudiante(estudiantes):
         "Estudiante" : (Nombre_c, Rut, matricula), "Curso": [],"Notas":"","Sede":""
     }
 def eliminar_estudiantes(estudiantes):
-    #revisar si existen estudiantes antes de hacerlo
-    while True:
-        borrar=int(input("Ingrese matricula estudiante: "))
-        for i in range(len(estudiantes)):
-            for estudiante in estudiantes:
-                if estudiante["Estudiante"][2] == f"N°{borrar}": 
-                    db_eliminacion.append({
-                    "Informacion Eliminada" : estudiantes.pop(i),
-                    "Procendencia" : "Estudiantes"
-                    },)
-                    eliminacion_guardar(db_eliminacion)
-                    print("Estudiante eliminado correctamente")
-                    return
-                else:
-                        print("Estudiante no encontrado.")
-                        break
+    if bool(estudiantes):
+        while True:
+            borrar=int(input("Ingrese matricula estudiante: "))
+            for i in range(len(estudiantes)):
+                for estudiante in estudiantes:
+                    if estudiante["Estudiante"][2] == f"N°{borrar}": 
+                        db_eliminacion.append({
+                        "Informacion Eliminada" : estudiantes.pop(i),
+                        "Procendencia" : "Estudiantes"
+                        },)
+                        eliminacion_guardar(db_eliminacion)
+                        print("Estudiante eliminado correctamente")
+                        return
+                    else:
+                            print("Estudiante no encontrado.")
+                            break
+    else:
+        print("No existen actualmente estudiantes creados, intentelo nuevamente en otra ocasion")
 def listar_estudiantes(estudiantes):
     if bool(estudiantes):
         df = pd.DataFrame(data = estudiantes)
