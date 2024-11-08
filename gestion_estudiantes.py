@@ -1,7 +1,6 @@
 import pandas as pd
 from eliminaciones import *
 
-
 def registrar_estudiante(estudiantes):
     loop=True
     existe=False
@@ -31,15 +30,16 @@ def eliminar_estudiantes(estudiantes):
         for i in range(len(estudiantes)):
             for estudiante in estudiantes:
                 if estudiante["Estudiante"][2] == f"N°{borrar}": 
-                    db_eliminacion = {
+                    db_eliminacion.append({
                     "Informacion Eliminada" : estudiantes.pop(i),
                     "Procendencia" : "Estudiantes"
-                    }
+                    },)
                     eliminacion_guardar(db_eliminacion)
                     print("Estudiante eliminado correctamente")
                     return
                 else:
                         print("Estudiante no encontrado.")
+                        break
 def listar_estudiantes(estudiantes):
     df = pd.DataFrame(data = estudiantes)
     return print(df.rename(columns = {"Estudiante" : "Informacion Estudiante", "Curso" : "Asignaturas a cursar"}))

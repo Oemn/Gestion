@@ -10,6 +10,7 @@ from eliminaciones import *
 estudiantes=cargar_estudiantes()
 cursos=["Filosofia", "Teologia", "Antropologia", "Arqueologia"]
 sede=("Concepcion","Lota")
+db_eliminacion = []
 while True:
     try:
         print("""
