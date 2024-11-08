@@ -79,8 +79,9 @@ while True:
             listar_estudiantes(estudiantes)
         elif menu == 8:
             guardar_estudiantes(estudiantes)
+            print("Hasta la proximaaaaaaaaaaaaaaaa")
             break
         else:
             print("Opcion ingresada incorrecta. ")
     except:
-        print("Valor ingresado incorrecto.")    
+        print("Valor ingresado incorrecto.")
