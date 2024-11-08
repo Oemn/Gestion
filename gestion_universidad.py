@@ -1,9 +1,3 @@
-# def asignar_sede(estudiantes):
-#     asignar=input("Ingresar matricula de estudiante: ")
-#     sede_ingresar=input("Ingrese Sede a asignar: ")
-#     for i in range(len(estudiantes)):
-#         if f"N°{asignar}" == estudiantes[i]['Estudiante'][2]:
-#             estudiantes[i]['Sede']=sede_ingresar
 def asignar_sede(estudiantes):
     encontrado = False
     loop=True
