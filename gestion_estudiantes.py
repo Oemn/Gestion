@@ -41,5 +41,8 @@ def eliminar_estudiantes(estudiantes):
                         print("Estudiante no encontrado.")
                         break
 def listar_estudiantes(estudiantes):
-    df = pd.DataFrame(data = estudiantes)
-    return print(df.rename(columns = {"Estudiante" : "Informacion Estudiante", "Curso" : "Asignaturas a cursar"}))
+    if bool(estudiantes):
+        df = pd.DataFrame(data = estudiantes)
+        return print(df.rename(columns = {"Estudiante" : "Informacion Estudiante", "Curso" : "Asignaturas a cursar"}))
+    else:
+        print("No existen estudiantes registrados.")
