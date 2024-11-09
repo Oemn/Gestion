@@ -50,6 +50,10 @@ def eliminar_estudiantes(estudiantes):
 def listar_estudiantes(estudiantes):
     if bool(estudiantes):
         df = pd.DataFrame(data = estudiantes)
-        return print(df.rename(columns = {"Estudiante" : "Informacion Estudiante", "Curso" : "Asignaturas a cursar"}))
+        df["Nombre"] = df["Estudiante"].str[0]
+        df["Rut"] = df["Estudiante"].str[1]
+        df["Matricula"] =df["Estudiante"].str[2]
+        df = df.reindex(columns = ["Nombre","Rut","Matricula","Curso", "Notas", "Sede"])
+        return print(df)
     else:
         print("No existen estudiantes registrados.")

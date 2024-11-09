@@ -20,7 +20,7 @@ while True:
         7.Listar Estudiantes
         8-Cerrar programa
         """)
-        menu=int(input("Seleccione "))
+        menu=int(input("Introduzca opcion:  "))
         if menu == 1:
             while True:
                 try:
