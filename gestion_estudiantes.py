@@ -59,7 +59,7 @@ def listar_estudiantes(estudiantes):
         df["Nombre"] = df["Estudiante"].str[0]
         df["Rut"] = df["Estudiante"].str[1]
         df["Matricula"] = df["Estudiante"].str[2]
-        df = df.reindex(columns = ["Nombre","Rut","Matricula","Curso", "Notas", "Sede"])
+        df = df.reindex(columns = ["Nombre","Rut","Matricula","Curso", "Sede"])
         return print(df)
     else:
         print("No existen estudiantes registrados.")
