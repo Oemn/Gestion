@@ -57,3 +57,6 @@ def eliminar_calificaciones(calificaciones):
             else:
                 print("Estudiantes no encontrado.")
                     
+                    
+def promediar(calificaciones):
+    pass

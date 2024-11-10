@@ -5,21 +5,23 @@ from gestion_cursos import *
 from Calificaciones import *
 from gestion_universidad import *
 from eliminaciones import *
+
+
 estudiantes = cargar_estudiantes()
 calificaciones = cargar_calificaciones()
 cursos=("Filosofia", "Teologia", "Antropologia", "Arqueologia")
 sede=("Concepcion","Lota")
+
 while True:
     try:
         print("""
-        1-Estudiantes
-        2-Cursos
-        3-Notas
-        4-Universidad
-        5-Promediar nota
-        6-Listar alumnos y cursos
-        7.Listar Estudiantes
-        8-Cerrar programa
+        1° Estudiantes
+        2° Cursos
+        3° Notas
+        4° Universidad
+        5° Promediar nota
+        6° Listar alumnos y cursos
+        7° Cerrar programa
         """)
         menu=int(input("Introduzca opcion:  "))
         if menu == 1:
@@ -123,10 +125,9 @@ while True:
             #promediar las notas(un solo estudiante)
             break
         elif menu == 6:
-            break
-        elif menu == 7:
             listar_estudiantes(estudiantes)
-        elif menu == 8:
+            listar_calificaciones(calificaciones)  
+        elif menu == 7:
             guardar_estudiantes(estudiantes)
             guardar_calificaciones(calificaciones)
             print("Hasta la proximaaaaaaaaaaaaaaaa")
