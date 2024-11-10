@@ -26,7 +26,7 @@ def registrar_estudiante(estudiantes):
             print("Valor ingresado incorrecto.")
     for e in range(len(estudiantes)+1001): matricula = f"N°{e}"
     return {
-        "Estudiante" : (Nombre_c, Rut, matricula), "Curso": [],"Notas":"","Sede":""
+        "Estudiante" : (Nombre_c, Rut, matricula), "Curso" : [] , "Notas" : " " , "Sede": " "
     }
 def eliminar_estudiantes(estudiantes):
     if bool(estudiantes):
@@ -52,7 +52,7 @@ def listar_estudiantes(estudiantes):
         df = pd.DataFrame(data = estudiantes)
         df["Nombre"] = df["Estudiante"].str[0]
         df["Rut"] = df["Estudiante"].str[1]
-        df["Matricula"] =df["Estudiante"].str[2]
+        df["Matricula"] = df["Estudiante"].str[2]
         df = df.reindex(columns = ["Nombre","Rut","Matricula","Curso", "Notas", "Sede"])
         return print(df)
     else:

@@ -78,7 +78,7 @@ while True:
                     """)
                     opcion_nota=int(input("Seleccione opcion: "))
                     if opcion_nota == 1:
-                        break
+                        asignar_notas(estudiantes)
                     elif opcion_nota == 2:
                         break
                     elif opcion_nota == 3:
