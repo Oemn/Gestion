@@ -5,7 +5,8 @@ from gestion_cursos import *
 from Calificaciones import *
 from gestion_universidad import *
 from eliminaciones import *
-estudiantes=cargar_estudiantes()
+estudiantes = cargar_estudiantes()
+calificaciones = cargar_calificaciones()
 cursos=("Filosofia", "Teologia", "Antropologia", "Arqueologia")
 sede=("Concepcion","Lota")
 while True:
@@ -35,15 +36,16 @@ while True:
                         guardar_estudiantes(estudiantes)
                         break
                     elif opcion_estudiante == 2:
-                        eliminar_estudiantes(estudiantes)
+                        eliminar_estudiantes(estudiantes,calificaciones)
                         guardar_estudiantes(estudiantes)
+                        guardar_calificaciones(calificaciones)
                         break
                     elif opcion_estudiante == 3:
                         break
                     else:
                         print("Opcion ingresada invalida")
                 except:
-                    print("Valor ingresado incorrecto.")
+                    print("Valor ingresado incorrecto1.")
                     
         elif menu == 2:
             while True:
@@ -74,16 +76,22 @@ while True:
                     1° Asignar nota
                     2° Modificar nota
                     3° Eliminar nota(todas)
-                    4° Salir
+                    4° Listar Calificaciones
+                    5° Salir
                     """)
                     opcion_nota=int(input("Seleccione opcion: "))
                     if opcion_nota == 1:
-                        asignar_notas(estudiantes)
+                        asignar_notas(estudiantes, calificaciones)
+                        guardar_calificaciones(calificaciones)
                     elif opcion_nota == 2:
                         break
                     elif opcion_nota == 3:
-                        break
+                        eliminar_calificaciones(calificaciones)
+                        guardar_calificaciones(calificaciones)
                     elif opcion_nota == 4:
+                        listar_calificaciones(calificaciones)
+                    elif opcion_nota == 5:
+                        guardar_calificaciones(calificaciones)
                         break
                     else:
                         print("Opcion ingresada invalida.")
@@ -120,9 +128,10 @@ while True:
             listar_estudiantes(estudiantes)
         elif menu == 8:
             guardar_estudiantes(estudiantes)
+            guardar_calificaciones(calificaciones)
             print("Hasta la proximaaaaaaaaaaaaaaaa")
             break
         else:
             print("Opcion ingresada incorrecta. ")
     except:
-        print("Valor ingresado incorrecto.")
+        print("Valor ingresado incorrecto.2")

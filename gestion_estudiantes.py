@@ -26,9 +26,9 @@ def registrar_estudiante(estudiantes):
             print("Valor ingresado incorrecto.")
     for e in range(len(estudiantes)+1001): matricula = f"N°{e}"
     return {
-        "Estudiante" : (Nombre_c, Rut, matricula), "Curso" : [] , "Notas" : " " , "Sede": " "
+        "Estudiante" : (Nombre_c, Rut, matricula), "Curso" : [] , "Sede": " "
     }
-def eliminar_estudiantes(estudiantes):
+def eliminar_estudiantes(estudiantes, calificaciones):
     if bool(estudiantes):
         while True:
             borrar=int(input("Ingrese matricula estudiante: "))
@@ -41,6 +41,12 @@ def eliminar_estudiantes(estudiantes):
                         },)
                         eliminacion_guardar(db_eliminacion)
                         print("Estudiante eliminado correctamente")
+                        if f"N°{borrar}" in calificaciones:
+                            db_eliminacion.append({
+                                "informacion Eliminada" : calificaciones.pop(f"N°{borrar}"),
+                                "Procendencia" : "Calificaciones"
+                            })
+                            eliminacion_guardar(db_eliminacion)
                         return
                     else:
                             print("Estudiante no encontrado.")
