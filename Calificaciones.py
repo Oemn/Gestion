@@ -29,7 +29,10 @@ def asignar_notas( estudiantes, calificaciones):
                 print("Matricula no Encontrada")
 
 def listar_calificaciones(calificaciones):
-    print(pd.DataFrame(calificaciones).transpose())
+    if bool(calificaciones):
+        print(pd.DataFrame(calificaciones).transpose())
+    else:
+        print("No se encuentran notas registradas.")
     
 def guardar_calificaciones(calificaciones):
         with open("calificaciones.json", "w") as n:
