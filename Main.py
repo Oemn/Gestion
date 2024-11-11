@@ -85,13 +85,16 @@ while True:
                     if opcion_nota == 1:
                         asignar_notas(estudiantes, calificaciones)
                         guardar_calificaciones(calificaciones)
+                        break
                     elif opcion_nota == 2:
                         break
                     elif opcion_nota == 3:
                         eliminar_calificaciones(calificaciones)
                         guardar_calificaciones(calificaciones)
+                        break
                     elif opcion_nota == 4:
                         listar_calificaciones(calificaciones)
+                        break
                     elif opcion_nota == 5:
                         guardar_calificaciones(calificaciones)
                         break
@@ -135,4 +138,4 @@ while True:
         else:
             print("Opcion ingresada incorrecta. ")
     except:
-        print("Valor ingresado incorrecto.2")
+        print("Valor ingresado incorrecto.")
