@@ -38,9 +38,12 @@ while True:
                         guardar_estudiantes(estudiantes)
                         break
                     elif opcion_estudiante == 2:
-                        eliminar_estudiantes(estudiantes,calificaciones)
-                        guardar_estudiantes(estudiantes)
-                        guardar_calificaciones(calificaciones)
+                        if bool(estudiantes):
+                            eliminar_estudiantes(estudiantes,calificaciones)
+                            guardar_estudiantes(estudiantes)
+                            guardar_calificaciones(calificaciones)
+                        else:
+                            print("No existen estudiantes")
                         break
                     elif opcion_estudiante == 3:
                         break
@@ -59,8 +62,11 @@ while True:
                     """)
                     opcion_curso=int(input("Seleccione una opcion: "))
                     if opcion_curso == 1:
-                        asignar_curso(estudiantes, cursos)
-                        guardar_estudiantes(estudiantes)
+                        if bool(estudiantes):
+                            asignar_curso(estudiantes, cursos)
+                            guardar_estudiantes(estudiantes)
+                        else:
+                            print("No existen estudiantes")
                         break
                     elif opcion_curso == 2:
                         listar_cursos(cursos)
@@ -83,14 +89,24 @@ while True:
                     """)
                     opcion_nota=int(input("Seleccione opcion: "))
                     if opcion_nota == 1:
-                        asignar_notas(estudiantes, calificaciones)
-                        guardar_calificaciones(calificaciones)
+                        if bool(estudiantes):
+                            asignar_notas(estudiantes, calificaciones)
+                            guardar_calificaciones(calificaciones)
+                        else:
+                            print("No existen estudiantes")
                         break
                     elif opcion_nota == 2:
+                        if bool(estudiantes):
+                            modificar_calificaciones(calificaciones)
+                        else:
+                            print("No existen estudiantes")
                         break
                     elif opcion_nota == 3:
-                        eliminar_calificaciones(calificaciones)
-                        guardar_calificaciones(calificaciones)
+                        if bool(estudiantes):
+                            eliminar_calificaciones(calificaciones)
+                            guardar_calificaciones(calificaciones)
+                        else:
+                            print("No existen estudiantes")
                         break
                     elif opcion_nota == 4:
                         listar_calificaciones(calificaciones)

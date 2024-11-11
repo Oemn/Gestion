@@ -2,27 +2,25 @@
     {
         "Informacion Eliminada": {
             "Estudiante": [
-                "ewewew",
-                1111,
+                "pepito",
+                1,
                 "N\u00b01000"
             ],
-            "Curso": [],
-            "Notas": "",
-            "Sede": ""
+            "Curso": [
+                "Filosofia"
+            ],
+            "Sede": "Concepcion"
         },
         "Procendencia": "Estudiantes"
     },
     {
-        "Informacion Eliminada": {
-            "Estudiante": [
-                "eee",
-                222,
-                "N\u00b01001"
-            ],
-            "Curso": [],
-            "Notas": "",
-            "Sede": ""
+        "informacion Eliminada": {
+            "Filosofia": [
+                5.0,
+                4.0,
+                3.0
+            ]
         },
-        "Procendencia": "Estudiantes"
+        "Procendencia": "Calificaciones"
     }
 ]
