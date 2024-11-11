@@ -125,8 +125,7 @@ while True:
                 except:
                     print("Valor ingresado incorrecto.")
         elif menu == 5:
-            #promediar las notas(un solo estudiante)
-            break
+            promediar(calificaciones)
         elif menu == 6:
             listar_estudiantes(estudiantes)
             listar_calificaciones(calificaciones)  

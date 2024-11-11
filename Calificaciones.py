@@ -30,9 +30,9 @@ def asignar_notas(estudiantes, calificaciones):
                             else:
                                print("Ingrese calificacion en el range requerido: entre 1.0 y 7.0 ")
                 return                 
-            elif found == False:
-                print("Matricula no Encontrada")
-                continue
+            # elif found == False:
+            #     print("Matricula no Encontrada")
+            #     continue
 
 def listar_calificaciones(calificaciones):
     if bool(calificaciones):
@@ -65,10 +65,23 @@ def eliminar_calificaciones(calificaciones):
                 return
             else:
                 print("Estudiantes no encontrado.")
-                    
+
+def modificar_calificaciones(cf):
+    pass                   
                     
 def promediar(calificaciones):
-    pass
-    # while True:
-    #     matricula = int(input("Ingrese la matricula del estudiante: "))
-    #     if f"N°{matricula}" in calificaciones
+    found = False
+    while True:
+        matricula = int(input("Ingrese la matricula del estudiante: "))
+        for key in calificaciones:
+            if key == f"N°{matricula}":
+                found = True
+                for c in calificaciones[key]:
+                    prom = 0
+                    for i in range(0,3):
+                        prom += calificaciones[key][c][i]
+                    print(f"El Promedio de {c} es", prom/3)
+        return
+            # elif found == False:
+            #     print("Matricula de estudiantes no encontrada")
+            #     continue
