@@ -3,19 +3,23 @@ import json
 import os
 from eliminaciones import *
 db_c = []
-def asignar_notas( estudiantes, calificaciones):
+def asignar_notas(estudiantes, calificaciones):
         found = False
-        for i in range(len(estudiantes)):
-            buscar_mat = int(input("Ingrese la matricula del estudiante ha asignar: "))
-            if estudiantes[i]["Estudiante"][2] == f"N°{buscar_mat}":
+        buscar_mat = int(input("Ingrese la matricula del estudiante ha asignar: "))
+        
+        for estudiante in estudiantes:
+            if estudiante["Estudiante"][2] == f"N°{buscar_mat}":
+                found = True
                 if f"N°{buscar_mat}" not in calificaciones:   
                     calificaciones[f"N°{buscar_mat}"] = {}
                     
-                for c in estudiantes[i]["Curso"]:
+                for c in estudiante["Curso"]:
                     if c not in calificaciones[f"N°{buscar_mat}"]:
                         calificaciones[f"N°{buscar_mat}"][c] = []
+                        
                     elif c in calificaciones[f"N°{buscar_mat}"]:
                         continue
+                    
                     print(f"Se ingresaran las calificaciones a la asignatura {c}")
                     for e in range(1,4):
                         while True:    
@@ -28,6 +32,7 @@ def asignar_notas( estudiantes, calificaciones):
                 return                 
             elif found == False:
                 print("Matricula no Encontrada")
+                continue
 
 def listar_calificaciones(calificaciones):
     if bool(calificaciones):
@@ -64,3 +69,6 @@ def eliminar_calificaciones(calificaciones):
                     
 def promediar(calificaciones):
     pass
+    # while True:
+    #     matricula = int(input("Ingrese la matricula del estudiante: "))
+    #     if f"N°{matricula}" in calificaciones
