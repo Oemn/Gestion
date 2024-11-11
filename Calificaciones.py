@@ -12,10 +12,11 @@ def asignar_notas( estudiantes, calificaciones):
                     calificaciones[f"N°{buscar_mat}"] = {}
                     
                 for c in estudiantes[i]["Curso"]:
-                    print(f"Se ingresaran las calificaciones a la asignatura {c}")
                     if c not in calificaciones[f"N°{buscar_mat}"]:
                         calificaciones[f"N°{buscar_mat}"][c] = []
-                        
+                    elif c in calificaciones[f"N°{buscar_mat}"]:
+                        continue
+                    print(f"Se ingresaran las calificaciones a la asignatura {c}")
                     for e in range(1,4):
                         while True:    
                             nota = float(input(f"Ingrese calificacion N°{e}: "))

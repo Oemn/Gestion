@@ -12,7 +12,7 @@ def registrar_estudiante(estudiantes):
             break
     while loop:
         try:
-            Rut = int(input("Ingrese rut (sin puntos,ni guion: )"))
+            Rut = int(input("Ingrese rut (sin puntos,ni guion): "))
             for i in range(len(estudiantes)):
                 if Rut == estudiantes[i]['Estudiante'][1]:
                     print("Ya existe el rut.")
