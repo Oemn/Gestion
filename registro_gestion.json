@@ -1,35 +1,13 @@
 [
     {
         "Estudiante": [
-            "d",
+            "pepito",
             1,
             "N\u00b01000"
         ],
         "Curso": [
-            "Filosofia",
-            "Teologia"
+            "Filosofia"
         ],
         "Sede": "Concepcion"
-    },
-    {
-        "Estudiante": [
-            "n",
-            2,
-            "N\u00b01001"
-        ],
-        "Curso": [],
-        "Sede": "Concepcion"
-    },
-    {
-        "Estudiante": [
-            "w",
-            3,
-            "N\u00b01002"
-        ],
-        "Curso": [
-            "Antropologia",
-            "Arqueologia"
-        ],
-        "Sede": "Lota"
     }
 ]

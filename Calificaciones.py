@@ -4,32 +4,36 @@ import os
 from eliminaciones import *
 db_c = []
 def asignar_notas(estudiantes, calificaciones):
-        found = False
-        buscar_mat = int(input("Ingrese la matricula del estudiante ha asignar: "))
-        
-        for estudiante in estudiantes:
-            if estudiante["Estudiante"][2] == f"N°{buscar_mat}":
-                found = True
-                if f"N°{buscar_mat}" not in calificaciones:   
-                    calificaciones[f"N°{buscar_mat}"] = {}
-                    
-                for c in estudiante["Curso"]:
-                    if c not in calificaciones[f"N°{buscar_mat}"]:
-                        calificaciones[f"N°{buscar_mat}"][c] = []
-                        
-                    elif c in calificaciones[f"N°{buscar_mat}"]:
-                        continue
-                    
-                    print(f"Se ingresaran las calificaciones a la asignatura {c}")
-                    for e in range(1,4):
-                        while True:    
-                            nota = float(input(f"Ingrese calificacion N°{e}: "))
-                            if nota > 0 and nota < 8 :
-                                calificaciones[f"N°{buscar_mat}"][c].append(nota)
-                                break
-                            else:
-                               print("Ingrese calificacion en el range requerido: entre 1.0 y 7.0 ")
-                return                 
+    while True:
+        try:
+            buscar_mat = int(input("Ingrese la matricula del estudiante ha asignar: "))
+            for estudiante in estudiantes:
+                if estudiante["Estudiante"][2] == f"N°{buscar_mat}":
+                    if f"N°{buscar_mat}" not in calificaciones:   
+                        calificaciones[f"N°{buscar_mat}"] = {}
+                            
+                    for c in estudiante["Curso"]:
+                        if c not in calificaciones[f"N°{buscar_mat}"]:
+                            calificaciones[f"N°{buscar_mat}"][c] = []
+                                
+                        elif c in calificaciones[f"N°{buscar_mat}"]:
+                            continue
+                            
+                        print(f"Se ingresaran las calificaciones a la asignatura {c}")
+                        for e in range(1,4):
+                            while True:
+                                try:    
+                                    nota = float(input(f"Ingrese calificacion N°{e}: "))
+                                    if nota >=1 and nota <=7:
+                                        calificaciones[f"N°{buscar_mat}"][c].append(nota)
+                                        break
+                                    else:
+                                        print("Ingrese calificacion en el range requerido: entre 1.0 y 7.0 ")
+                                except:
+                                    print("Valor ingresado incorrecto")        
+                        return
+        except:
+            print("Valor ingresado incorrecto")                
             # elif found == False:
             #     print("Matricula no Encontrada")
             #     continue
