@@ -32,7 +32,7 @@ def asignar_notas(estudiantes, calificaciones):
                                         print("Ingrese calificacion en el range requerido: entre 1.0 y 7.0 ")
                                 except:
                                     print("Valor ingresado incorrecto")        
-                        return
+                    return
         except:
             print("Valor ingresado incorrecto")                
 
@@ -59,11 +59,11 @@ def eliminar_calificaciones(calificaciones):
             borrar = int(input("Ingrese matricula estudiante: "))
             if f"N°{borrar}" in calificaciones:
                 now = str(datetime.datetime.now())
-                db_c.append({
-                                "informacion Eliminada" : calificaciones.pop(f"N°{borrar}"),
-                                "Procendencia" : "Calificaciones",
-                                "Fecha de eliminacion" : now
-                            })
+                db_c = {
+                        "informacion Eliminada" : calificaciones.pop(f"N°{borrar}"),
+                        "Procendencia" : "Calificaciones",
+                        "Fecha de eliminacion" : now
+                            }
                 eliminacion_guardar(db_c)
                 print("Calificacion/es eliminada correctamente.")
                 return

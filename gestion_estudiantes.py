@@ -38,19 +38,19 @@ def eliminar_estudiantes(estudiantes, calificaciones):
                     for estudiante in estudiantes:
                         if estudiante["Estudiante"][2] == f"N°{borrar}": 
                             now = str(datetime.datetime.now())
-                            db_eliminacion.append({
+                            db_eliminacion = {
                             "Informacion Eliminada" : estudiantes.pop(i),
                             "Procendencia" : "Estudiantes",
                             "Fecha de eliminacion" : now
-                            },)
+                            }
                             eliminacion_guardar(db_eliminacion)
                             print("Estudiante eliminado correctamente")
                             if f"N°{borrar}" in calificaciones:
-                                db_eliminacion.append({
+                                db_eliminacion = {
                                     "informacion Eliminada" : calificaciones.pop(f"N°{borrar}"),
                                     "Procendencia" : "Calificaciones",
                                     "Fecha de eliminacion" : now
-                                })
+                                }
                                 eliminacion_guardar(db_eliminacion)
                             return
                         # else:
@@ -58,7 +58,7 @@ def eliminar_estudiantes(estudiantes, calificaciones):
                         #break
             
             except:
-                continue
+                print("Error en el funcionamiento normal del codigo encontrado")
     else:
         print("No existen actualmente estudiantes creados, intentelo nuevamente en otra ocasion")
 def listar_estudiantes(estudiantes):

@@ -7,20 +7,82 @@
                 "N\u00b01000"
             ],
             "Curso": [
-                "Filosofia"
+                "Filosofia",
+                "Arqueologia"
             ],
             "Sede": "Concepcion"
         },
-        "Procendencia": "Estudiantes"
+        "Procendencia": "Estudiantes",
+        "Fecha de eliminacion": "2024-11-11 22:42:52.706853"
+    },
+    {
+        "informacion Eliminada": {
+            "Teologia": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "Arqueologia": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "Procendencia": "Calificaciones",
+        "Fecha de eliminacion": "2024-11-11 22:42:52.706853"
     },
     {
         "informacion Eliminada": {
             "Filosofia": [
-                5.0,
-                4.0,
-                3.0
+                1.0,
+                1.0,
+                1.0
+            ],
+            "Arqueologia": [
+                1.0,
+                1.0,
+                1.0
             ]
         },
-        "Procendencia": "Calificaciones"
+        "Procendencia": "Calificaciones",
+        "Fecha de eliminacion": "2024-11-11 22:44:51.003069"
+    },
+    {
+        "Informacion Eliminada": {
+            "Estudiante": [
+                "de",
+                2,
+                "N\u00b01001"
+            ],
+            "Curso": [
+                "Teologia",
+                "Antropologia",
+                "Arqueologia"
+            ],
+            "Sede": " "
+        },
+        "Procendencia": "Estudiantes",
+        "Fecha de eliminacion": "2024-11-11 22:45:08.895795"
+    },
+    {
+        "informacion Eliminada": {
+            "Teologia": [
+                7.0,
+                7.0,
+                7.0
+            ],
+            "Antropologia": [
+                6.0,
+                6.0,
+                6.0
+            ],
+            "Arqueologia": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "Procendencia": "Calificaciones",
+        "Fecha de eliminacion": "2024-11-11 22:45:08.895795"
     }
 ]

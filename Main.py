@@ -50,7 +50,8 @@ while True:
                     else:
                         print("Opcion ingresada invalida")
                 except:
-                    print("Valor ingresado incorrecto1.")
+                    print("Valor ingresado incorrecto.")
+
                     
         elif menu == 2:
             while True:

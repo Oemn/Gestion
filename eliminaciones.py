@@ -5,7 +5,16 @@ def eliminacion_guardar(db_eliminacion):
     if not os.path.exists(newpath):
         os.mkdir(newpath)
         print("Sea ha creado la carpeta db_sys")
+        
+    try:
+        with open(os.path.join(newpath, "registro_eliminacion.json"), "r") as eliminar:
+            registro = json.load(eliminar)
+    except (FileNotFoundError, json.JSONDecodeError):
+        registro = []
+        
+    registro.append(db_eliminacion)
+    
     with open(os.path.join(newpath, "registro_eliminacion.json"), "w") as eliminar:
-        Informacion_a_guardar = json.dumps(db_eliminacion, indent=4)
-        eliminar.write(Informacion_a_guardar)
+        json.dump(registro, eliminar, indent=4)
+        
     return
