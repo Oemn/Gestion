@@ -1,6 +1,7 @@
 import pandas as pd
 import json
 import os
+import datetime
 from eliminaciones import *
 db_c = []
 def asignar_notas(estudiantes, calificaciones):
@@ -57,9 +58,11 @@ def eliminar_calificaciones(calificaciones):
         while True:
             borrar = int(input("Ingrese matricula estudiante: "))
             if f"N°{borrar}" in calificaciones:
+                now = str(datetime.datetime.now())
                 db_c.append({
                                 "informacion Eliminada" : calificaciones.pop(f"N°{borrar}"),
-                                "Procendencia" : "Calificaciones"
+                                "Procendencia" : "Calificaciones",
+                                "Fecha de eliminacion" : now
                             })
                 eliminacion_guardar(db_c)
                 print("Calificacion/es eliminada correctamente.")

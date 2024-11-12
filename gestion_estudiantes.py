@@ -1,6 +1,7 @@
 import pandas as pd
 from eliminaciones import *
 db_eliminacion = []
+import datetime
 def registrar_estudiante(estudiantes):
     loop=True
     existe=False
@@ -31,26 +32,33 @@ def registrar_estudiante(estudiantes):
 def eliminar_estudiantes(estudiantes, calificaciones):
     if bool(estudiantes):
         while True:
-            borrar=int(input("Ingrese matricula estudiante: "))
-            for i in range(len(estudiantes)):
-                for estudiante in estudiantes:
-                    if estudiante["Estudiante"][2] == f"N°{borrar}": 
-                        db_eliminacion.append({
-                        "Informacion Eliminada" : estudiantes.pop(i),
-                        "Procendencia" : "Estudiantes"
-                        },)
-                        eliminacion_guardar(db_eliminacion)
-                        print("Estudiante eliminado correctamente")
-                        if f"N°{borrar}" in calificaciones:
+            try:
+                borrar=int(input("Ingrese matricula estudiante: "))
+                for i in range(len(estudiantes)):
+                    for estudiante in estudiantes:
+                        if estudiante["Estudiante"][2] == f"N°{borrar}": 
+                            now = str(datetime.datetime.now())
                             db_eliminacion.append({
-                                "informacion Eliminada" : calificaciones.pop(f"N°{borrar}"),
-                                "Procendencia" : "Calificaciones"
-                            })
+                            "Informacion Eliminada" : estudiantes.pop(i),
+                            "Procendencia" : "Estudiantes",
+                            "Fecha de eliminacion" : now
+                            },)
                             eliminacion_guardar(db_eliminacion)
-                        return
-                    else:
-                            print("Estudiante no encontrado.")
-                            break
+                            print("Estudiante eliminado correctamente")
+                            if f"N°{borrar}" in calificaciones:
+                                db_eliminacion.append({
+                                    "informacion Eliminada" : calificaciones.pop(f"N°{borrar}"),
+                                    "Procendencia" : "Calificaciones",
+                                    "Fecha de eliminacion" : now
+                                })
+                                eliminacion_guardar(db_eliminacion)
+                            return
+                        # else:
+                        #         print("Estudiante no encontrado.")
+                        #break
+            
+            except:
+                continue
     else:
         print("No existen actualmente estudiantes creados, intentelo nuevamente en otra ocasion")
 def listar_estudiantes(estudiantes):
